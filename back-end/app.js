@@ -28,7 +28,36 @@ app.use('/users', usersRouter);
 const teste = require('./routes/teste')
 app.use('/teste', teste)
 
-// Rota para curso
+
+//Rota para curso1
+const curso1 = require('./routes/curso1')
+app.use('/curso1', curso1)
+
+//Rota para professor1
+const professor1 = require('./routes/professor1')
+app.use('/professor1', professor1)
+
+//Rota para eixo
+const eixo = require('./routes/eixo')
+app.use('/eixo', eixo)
+
+//Rota para atividade
+const atividade = require('./routes/atividade')
+app.use('/atividade', atividade)
+
+//Rota para aluno
+const aluno = require('./routes/aluno')
+app.use('/aluno', aluno)
+
+//Rota para sala-aula
+const sala_aula1 = require('./routes/sala_aula1')
+app.use('/sala-aula1', sala_aula1)
+
+
+
+
+
+// Rota para curso 
 const curso = require('./routes/curso')
 app.use('/curso', curso)
 
