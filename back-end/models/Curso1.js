@@ -11,12 +11,6 @@ const esquema = mongoose.Schema({
         min: 600,
         
         default: 800    // Valor padrão
-    },
-    nivel: {
-        type: String,
-        required: true,
-        // Conjunto dos valores válidos
-        enum: ['FaseI', 'FaseII']
     }
     
 })

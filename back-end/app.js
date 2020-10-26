@@ -33,9 +33,9 @@ app.use('/teste', teste)
 const curso1 = require('./routes/curso1')
 app.use('/curso1', curso1)
 
-//Rota para professor1
-const professor1 = require('./routes/professor1')
-app.use('/professor1', professor1)
+//Rota para mestre
+const mestre = require('./routes/mestre')
+app.use('/mestre', mestre)
 
 //Rota para eixo
 const eixo = require('./routes/eixo')
@@ -46,12 +46,29 @@ const atividade = require('./routes/atividade')
 app.use('/atividade', atividade)
 
 //Rota para aluno
-const aluno = require('./routes/aluno')
-app.use('/aluno', aluno)
+const aluno1 = require('./routes/aluno1')
+app.use('/aluno1', aluno1)
+//Rota para equipe
 
-//Rota para sala-aula
+const equipe = require('./routes/equipe')
+app.use('/equipe', equipe)
+
+// Rota para sala-aula
 const sala_aula1 = require('./routes/sala_aula1')
 app.use('/sala-aula1', sala_aula1)
+
+
+
+// Rota para atividade-eixo
+const atividade_eixo = require('./routes/atividade_eixo')
+app.use('/atividade-eixo', atividade_eixo)
+
+// Rota para curso-eixo
+const curso_eixo = require('./routes/curso_eixo')
+app.use('/curso-eixo', curso_eixo)
+
+
+
 
 
 
@@ -70,6 +87,9 @@ const sala_aula = require('./routes/sala_aula')
 app.use('/sala-aula', sala_aula)
 //Rota para turma
 
-const turma = require('./routes/turma')
-app.use('/turma', turma)
+
+//Rota para aluno
+const aluno = require('./routes/aluno')
+app.use('/aluno', aluno)
+
 module.exports = app;

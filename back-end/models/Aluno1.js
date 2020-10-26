@@ -2,8 +2,14 @@ const mongoose = require('mongoose')
 
 const esquema = mongoose.Schema({
     nome: { type: String, required: true },
-    capacidade: { type: Number, required: true, default: 30, min: 18, max: 25 },
-    recursos_didaticos: { type: String }
+    data_nascimento: { type: Date, required: true },
+         ra: { type: String, required: true },
+    telefone_contato: { type: String, required: true },
+    // e-mail com índice único para evitar duplicidades
+    email: { type: String, required: true, index: { unique: true }},
+    
+    equipe: {type: mongoose.ObjectId, ref: 'Equipe', required: true},
+    
 })
 
 // PARÂMETROS DO mongoose.model()
@@ -12,4 +18,4 @@ const esquema = mongoose.Schema({
 // 3º -> o nome da COLEÇÃO no BD que irá receber os objetos que serão
 //       criados a partir deste model (inicial minúscula, plural do
 //       nome do model)
-module.exports = mongoose.model('SalaAula1', esquema, 'salas_aula1')
+module.exports = mongoose.model('Aluno1', esquema, 'alunos1')

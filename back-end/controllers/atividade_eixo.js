@@ -27,7 +27,7 @@
 */
 
 // Importar o model para dentro do controller
-const Curso = require('../models/Curso')
+const AtividadeEixo = require('../models/AtividadeEixo')
 
 const controller = {}       // Objeto vazio
 
@@ -35,7 +35,7 @@ const controller = {}       // Objeto vazio
 controller.novo = async (req, res) => {
     try {
         // Envia os dados dentro de req.body para o BD para criação
-        await Curso.create(req.body)
+        await AtividadeEixo.create(req.body)
         // HTTP 201: Created
         res.status(201).end()
     }
@@ -50,10 +50,10 @@ controller.novo = async (req, res) => {
 controller.listar = async (req, res) => {
     try {
         // find() sem parâmetros é para trazer tudo
-        let dados = await Curso.find()
-        .populate('curso')
-        .populate('sala_aula')
-        .populate('professor', 'nome email')
+        let dados = await AtividadeEixo.find()
+        .populate('eixo')
+        .populate('atividade')
+        
         res.send(dados) // Vai com status 200: OK
     }
     catch (erro) {
@@ -65,7 +65,7 @@ controller.listar = async (req, res) => {
 // Método obterUm(), implementando a operação RETRIEVE (one)
 controller.obterUm = async (req, res) => {
     const id = req.params.id    // Capturando o parâmetro id
-    let obj = await Curso.findById(id)
+    let obj = await AtividadeEixo.findById(id)
 
     // Se o objeto vier preenchido (achou), então o retornamos
     if (obj) res.send(obj)
@@ -79,7 +79,7 @@ controller.atualizar = async (req, res) => {
         // Isolar o _id do objeto para fins de busca
         const id = req.body._id
         // Busca o objeto pelo id e, encontrando-o, substitui o conteúdo por req.body
-        let obj = await Curso.findByIdAndUpdate(id, req.body)
+        let obj = await AtividadeEixo.findByIdAndUpdate(id, req.body)
 
         // Se encontrou e substituiu, retornamos HTTP 204: No content
         if (obj) res.status(204).end()
@@ -97,7 +97,7 @@ controller.excluir = async (req, res) => {
     try {
         // Isolando o id para exclusão
         const id = req.body._id
-        let obj = await Curso.findByIdAndDelete(id)
+        let obj = await AtividadeEixo.findByIdAndDelete(id)
 
         // Encontrou e excluiu
         if(obj) res.status(204).end()

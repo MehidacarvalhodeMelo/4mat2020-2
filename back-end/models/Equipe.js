@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 
 const esquema = mongoose.Schema({
   nome: { type: String, required: true},
-  periodo: {type: String, required: true},
   data_inicial: { type: Date, required: true},
   data_final: { type: Date, required: true},
   dias_semana: [{
@@ -12,9 +11,14 @@ const esquema = mongoose.Schema({
   }],
   horario_inicial: {type: String, required: true },
   horario_final: { type: String, required: true},
-  curso: {type: mongoose.ObjectId, ref: 'Curso', required: true},
-  professor: {type: mongoose.ObjectId, ref: 'Professor', required: true},
-  sala_aula: {type: mongoose.ObjectId, ref: 'SalaAula', required: true}
+  curso: {type: mongoose.ObjectId, ref: 'Curso1', required: true},
+  professor: {type: mongoose.ObjectId, ref: 'Mestre', required: true},
+  sala_aula: {type: mongoose.ObjectId, ref: 'SalaAula1', required: true},
+  atividades: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Atividade',
+      required: true,
+  }],
 })
 
 
@@ -27,4 +31,4 @@ const esquema = mongoose.Schema({
 // 3º -> o nome da COLEÇÃO no BD que irá receber os objetos que serão
 //       criados a partir deste model (inicial minúscula, plural do
 //       nome do model)
-module.exports = mongoose.model('Turma', esquema, 'turmas')
+module.exports = mongoose.model('Equipe', esquema, 'equipes')

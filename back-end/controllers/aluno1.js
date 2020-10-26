@@ -27,7 +27,7 @@
 */
 
 // Importar o model para dentro do controller
-const Turma = require('../models/Turma')
+const Aluno1 = require('../models/Aluno1')
 
 const controller = {}       // Objeto vazio
 
@@ -35,7 +35,7 @@ const controller = {}       // Objeto vazio
 controller.novo = async (req, res) => {
     try {
         // Envia os dados dentro de req.body para o BD para criação
-        await Turma.create(req.body)
+        await Aluno1.create(req.body)
         // HTTP 201: Created
         res.status(201).end()
     }
@@ -50,7 +50,15 @@ controller.novo = async (req, res) => {
 controller.listar = async (req, res) => {
     try {
         // find() sem parâmetros é para trazer tudo
-        let dados = await Turma.find()
+        let dados = await Aluno1.find()
+        .populate({
+            path: 'equipe',
+            populate: [
+                { path: 'professor'},
+                { path: 'sala_aula'},
+                { path: 'curso'}
+            ]
+        })
         res.send(dados) // Vai com status 200: OK
     }
     catch (erro) {
@@ -62,7 +70,7 @@ controller.listar = async (req, res) => {
 // Método obterUm(), implementando a operação RETRIEVE (one)
 controller.obterUm = async (req, res) => {
     const id = req.params.id    // Capturando o parâmetro id
-    let obj = await Turma.findById(id)
+    let obj = await Aluno1.findById(id)
 
     // Se o objeto vier preenchido (achou), então o retornamos
     if (obj) res.send(obj)
@@ -76,7 +84,7 @@ controller.atualizar = async (req, res) => {
         // Isolar o _id do objeto para fins de busca
         const id = req.body._id
         // Busca o objeto pelo id e, encontrando-o, substitui o conteúdo por req.body
-        let obj = await Turma.findByIdAndUpdate(id, req.body)
+        let obj = await Aluno1.findByIdAndUpdate(id, req.body)
 
         // Se encontrou e substituiu, retornamos HTTP 204: No content
         if (obj) res.status(204).end()
@@ -94,7 +102,7 @@ controller.excluir = async (req, res) => {
     try {
         // Isolando o id para exclusão
         const id = req.body._id
-        let obj = await Turma.findByIdAndDelete(id)
+        let obj = await Aluno1.findByIdAndDelete(id)
 
         // Encontrou e excluiu
         if(obj) res.status(204).end()
