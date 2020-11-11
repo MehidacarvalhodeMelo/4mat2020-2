@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CursoService } from '../curso.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-curso-list',
@@ -8,12 +9,42 @@ import { CursoService } from '../curso.service';
 })
 export class CursoListComponent implements OnInit {
     cursos: any = [] //Vetor vazio
-    displayedColumns : string[] = ['nome', 'carga_horaria', 'nivel','valor_curso']
+    displayedColumns : string[] = ['nome', 'carga_horaria', 'nivel','valor_curso',
+'editar', 'excluir']
 
-  constructor(private cursoSrv : CursoService) { }
+  constructor(
+      private cursoSrv : CursoService,
+    private snackBar : MatSnackBar
+    ) { }
 
  async ngOnInit() {
       this.cursos = await this.cursoSrv.listar()
       console.log(this.cursos)
     }
-}
+    async excluir(id : string){
+        if(confirm('Deseja realmente excluir este item?')){
+            try{
+                //1) Efetuar a exclusão
+                await this.cursoSrv.excluir(id)
+                //2)atualizar os dados da tabela
+                this.ngOnInit()
+                               //3)Dar um feedback de sucesso para o usuário
+                this.snackBar.open('Item excluido com sucesso.', 'Entendi',{
+                    duration: 5000 //5 segundos
+
+                })
+            }
+ 
+ catch(erro){
+                console.error(erro)
+                //4)Dar um feedback de serro para o usuário
+                this.snackBar.open('ERRO não foi possível excluir este item.', 'Que pena!',{
+    duration: 5000 //5 segundos
+})
+
+            }
+
+     }
+           
+        }
+    }
