@@ -80,4 +80,4 @@ export class CursoFormComponent implements OnInit {
         // estiver "limpo"
         if (result) this.location.back()
     }
-}
+}       
