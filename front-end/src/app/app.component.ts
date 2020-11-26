@@ -16,5 +16,5 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
-  title = 'Escola Agora Vai';
+  title = 'Escola Fabiano Pucci de Lima';
 }
