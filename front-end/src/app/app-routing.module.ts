@@ -4,6 +4,8 @@ import { CursoListComponent } from './curso/curso-list/curso-list.component';
 import { CursoFormComponent } from './curso/curso-form/curso-form.component';
 import { TurmaListComponent } from './turma/turma-list/turma-list.component';
 import { TurmaFormComponent } from './turma/turma-form/turma-form.component';
+import { Curso1ListComponent} from './curso1/curso1-list/curso1-list.component';
+import { Curso1FormComponent} from './curso1/curso1-form/curso1-form.component';
 
 const routes: Routes = [
     //Rotas no Angular nunca começam com barra /
@@ -12,7 +14,11 @@ const routes: Routes = [
     {path: 'curso/:id', component: CursoFormComponent},
     {path: 'turma', component: TurmaListComponent},
     {path: 'turma/novo', component: TurmaFormComponent},
-    {path: 'turma/id', component: TurmaFormComponent}
+    {path: 'turma/id', component: TurmaFormComponent},
+    //Meu projeto
+    {path: 'curso1', component: Curso1ListComponent},
+    {path: 'curso1/novo', component: Curso1FormComponent},
+    {path: 'curso1/:id', component: Curso1FormComponent}
 
 ];
 
