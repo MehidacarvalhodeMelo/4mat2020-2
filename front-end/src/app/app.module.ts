@@ -28,6 +28,8 @@ import { TurmaListComponent } from './turma/turma-list/turma-list.component';
 import { TurmaFormComponent } from './turma/turma-form/turma-form.component';
 import { Curso1ListComponent } from './curso1/curso1-list/curso1-list.component';
 import { Curso1FormComponent } from './curso1/curso1-form/curso1-form.component';
+import { EixoListComponent } from './eixo/eixo-list/eixo-list.component';
+import { EixoFormComponent } from './eixo/eixo-form/eixo-form.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { Curso1FormComponent } from './curso1/curso1-form/curso1-form.component'
     TurmaListComponent,
     TurmaFormComponent,
     Curso1ListComponent,
-    Curso1FormComponent
+    Curso1FormComponent,
+    EixoListComponent,
+    EixoFormComponent
   ],
   imports: [
     BrowserModule,
