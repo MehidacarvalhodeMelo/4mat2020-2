@@ -8,6 +8,10 @@ import { Curso1ListComponent} from './curso1/curso1-list/curso1-list.component';
 import { Curso1FormComponent} from './curso1/curso1-form/curso1-form.component';
 import { EixoListComponent } from './eixo/eixo-list/eixo-list.component';
 import { EixoFormComponent } from './eixo/eixo-form/eixo-form.component';
+import { SalaAula1ListComponent } from './sala-aula1/sala-aula1-list/sala-aula1-list.component';
+import { SalaAula1FormComponent } from './sala-aula1/sala-aula1-form/sala-aula1-form.component';
+import { MestreListComponent } from './mestre/mestre-list/mestre-list.component';
+import {MestreFormComponent} from './mestre/mestre-form/mestre-form.component';
 
 const routes: Routes = [
     //Rotas no Angular nunca começam com barra /
@@ -24,6 +28,12 @@ const routes: Routes = [
     {path: 'eixo', component: EixoListComponent},
     {path: 'eixo/novo', component: EixoFormComponent},
     {path: 'eixo/:id', component: EixoFormComponent},
+    { path: 'sala-aula1', component: SalaAula1ListComponent},
+    {path: 'sala-aula1/novo', component: SalaAula1FormComponent},
+    {path: 'sala-aula1/:id', component: SalaAula1FormComponent},
+    { path: 'mestre', component: MestreListComponent},
+     {path: 'mestre/novo', component: MestreFormComponent},
+    {path: 'mestre/:id', component: MestreFormComponent}
 
 ];
 

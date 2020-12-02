@@ -30,6 +30,10 @@ import { Curso1ListComponent } from './curso1/curso1-list/curso1-list.component'
 import { Curso1FormComponent } from './curso1/curso1-form/curso1-form.component';
 import { EixoListComponent } from './eixo/eixo-list/eixo-list.component';
 import { EixoFormComponent } from './eixo/eixo-form/eixo-form.component';
+import { SalaAula1ListComponent } from './sala-aula1/sala-aula1-list/sala-aula1-list.component';
+import { SalaAula1FormComponent } from './sala-aula1/sala-aula1-form/sala-aula1-form.component';
+import { MestreListComponent } from './mestre/mestre-list/mestre-list.component';
+import { MestreFormComponent } from './mestre/mestre-form/mestre-form.component';
 
 
 @NgModule({
@@ -46,7 +50,11 @@ import { EixoFormComponent } from './eixo/eixo-form/eixo-form.component';
     Curso1ListComponent,
     Curso1FormComponent,
     EixoListComponent,
-    EixoFormComponent
+    EixoFormComponent,
+    SalaAula1ListComponent,
+    SalaAula1FormComponent,
+    MestreListComponent,
+    MestreFormComponent
   ],
   imports: [
     BrowserModule,

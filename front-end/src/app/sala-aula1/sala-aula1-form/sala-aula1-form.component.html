@@ -1,0 +1,41 @@
+<p>sala-aula1-form works!</p>
+<h1>{{title}}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+
+<!--mat-form-field appearance="fill"-->
+<mat-form-field>
+    <mat-label>Nome da Sala de Aula</mat-label>
+    <input name="nome" [(ngModel)]="salaAula1.nome" matInput required
+    placeholder="Informe o nome do salaAula1">
+  </mat-form-field>
+
+<mat-form-field >
+    <mat-label>Capacidade</mat-label>
+    <input name="capacidade" [(ngModel)]="salaAula1.capacidade" matInput required
+    placeholder="Informe a capacidade" type="number">
+  </mat-form-field>
+
+   <mat-form-field >
+    <mat-label>Recursos Didáticos</mat-label>
+    <input name="recursosDidaticos" [(ngModel)]="salaAula1.recursosDidaticos" matInput required
+    placeholder="Informe os recursos didáticos" type="string">
+  </mat-form-field>
+
+
+  
+
+
+ <mat-toolbar class="form-buttons">
+    <mat-toolbar-row>
+      <button mat-raised-button type="submit" color="accent">
+        Salvar
+      </button>
+      <button mat-raised-button type="button" (click)="voltar(f)">
+        Voltar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+    
+
+</form>

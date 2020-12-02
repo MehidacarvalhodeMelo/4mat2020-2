@@ -1,0 +1,76 @@
+<h1>{{title}}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+
+<!--mat-form-field appearance="fill"-->
+<mat-form-field>
+    <mat-label>Nome do professor</mat-label>
+    <input name="nome" [(ngModel)]="mestre.nome" matInput required
+    placeholder="Informe o nome do mestre" >
+  </mat-form-field>
+
+<mat-form-field >
+    <mat-label>Formação</mat-label>
+    <input name="formacao" [(ngModel)]="mestre.formacao" matInput required
+    placeholder="Informe a formação do professor" type="string">
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-label>Data de nascimento</mat-label>
+    <input name="data_nascimento" [(ngModel)]="mestre._nascimento" matInput required
+    placeholder="Informe a data de nascimento" type="date">
+    </mat-form-field>
+
+    
+    <mat-form-field >
+    <mat-label>CPF</mat-label>
+    <input name="cpf" [(ngModel)]="mestre.cpf" matInput required
+    placeholder="Informe o cpf do professor" type="number">
+  </mat-form-field>
+  
+  <mat-form-field >
+    <mat-label>RG</mat-label>
+    <input name="rg" [(ngModel)]="mestre.rg" matInput required
+    placeholder="Informe o rg do professor" type="number">
+  </mat-form-field>
+  
+  
+<mat-form-field >
+    <mat-label>Valor da hora aula</mat-label>
+    <input name="valor_hora_aula" [(ngModel)]="mestre.valor_hora_aula" matInput required
+    placeholder="Informe o valor da hora aula" type="float">
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-label>Endereço</mat-label>
+    <input name="endereco" [(ngModel)]="mestre.endereco" matInput required
+    placeholder="Informe o endereço do professor" type="string">
+  </mat-form-field>
+
+<mat-form-field >
+    <mat-label>Telefone</mat-label>
+    <input name="telefone" [(ngModel)]="mestre.telefone" matInput required
+    placeholder="Informe o telefone do professor" type="string">
+  </mat-form-field>
+
+<mat-form-field >
+    <mat-label>Email</mat-label>
+    <input name="email" [(ngModel)]="mestre.email" matInput required
+    placeholder="Informe o email do professor" type="string">
+  </mat-form-field>
+
+
+
+ <mat-toolbar class="form-buttons">
+    <mat-toolbar-row>
+      <button mat-raised-button type="submit" color="accent">
+        Salvar
+      </button>
+      <button mat-raised-button type="button" (click)="voltar(f)">
+        Voltar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+    
+
+</form>
