@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CursoEixoService {
     private server = environment.apiServer
-    private apiUri = this.server + 'curso_eixo'
+    private apiUri = this.server + 'curso-eixo'
 
   constructor(private http : HttpClient) { }
 

@@ -12,7 +12,7 @@ const esquema = mongoose.Schema({
   horario_inicial: {type: String, required: true },
   horario_final: { type: String, required: true},
   curso: {type: mongoose.ObjectId, ref: 'Curso1', required: true},
-  professor: {type: mongoose.ObjectId, ref: 'Mestre', required: true},
+  mestre: {type: mongoose.ObjectId, ref: 'Mestre', required: true},
   sala_aula: {type: mongoose.ObjectId, ref: 'SalaAula1', required: true},
   atividades: [{
       type: mongoose.Schema.Types.ObjectId,

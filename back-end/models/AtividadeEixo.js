@@ -3,9 +3,6 @@ const mongoose = require('mongoose')
 const esquema = mongoose.Schema({
     atividade: {type: mongoose.ObjectId, ref: 'Atividade', required: true},
     eixo: {type: mongoose.ObjectId, ref: 'Eixo', required: true}
-    
-
-
 })
 
 // PARÂMETROS DO mongoose.model()

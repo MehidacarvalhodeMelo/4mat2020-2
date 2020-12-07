@@ -1,17 +1,16 @@
 const mongoose = require('mongoose')
 
 const esquema = mongoose.Schema({
-    nomeEixo: {
-        type: String,
-        required: true  // Atributo obrigatório
-    },
-   
     nivel: {
         type: String,
         required: true,
         // Conjunto dos valores válidos
         enum: ['Fase I', 'Fase II']
-    }
+    },
+    carga_horaria: {
+        type: Number,
+        required: true
+    },
 })
 
 // PARÂMETROS DO mongoose.model()

@@ -1,7 +1,7 @@
 <h1>Listagem de cursoEixo</h1>
 
 <mat-toolbar class="new-item">
-  <a mat-raised-button color="accent" [routerLink]="['/cursoEixo/novo']">
+  <a mat-raised-button color="accent" [routerLink]="['/curso1-eixo/novo']">
     <mat-icon>add_circle</mat-icon>
     Novo cursoEixo
   </a>
@@ -15,10 +15,10 @@
 	
 
 	<!-- Curso Column -->
-	<ng-container matColumnDef="curso">
+	<ng-container matColumnDef="curso1">
 		<th mat-header-cell *matHeaderCellDef> Curso </th>
 		<td mat-cell *matCellDef="let cursoEixo">
-      {{ cursoEixo.curso?.nome }} ({{ cursoEixo.curso?.carga_horaria }})
+      {{ cursoEixo.curso1?.nome }} ({{ cursoEixo.curso1?.carga_horaria }})
     </td>
 	</ng-container>
 

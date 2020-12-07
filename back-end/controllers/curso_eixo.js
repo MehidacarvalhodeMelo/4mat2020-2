@@ -51,7 +51,7 @@ controller.listar = async (req, res) => {
     try {
         // find() sem parâmetros é para trazer tudo
         let dados = await CursoEixo.find()
-        .populate('curso')
+        .populate('curso1')
         .populate('eixo')
         res.send(dados) // Vai com status 200: OK
     }

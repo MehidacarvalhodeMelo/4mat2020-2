@@ -34,7 +34,16 @@ import { SalaAula1ListComponent } from './sala-aula1/sala-aula1-list/sala-aula1-
 import { SalaAula1FormComponent } from './sala-aula1/sala-aula1-form/sala-aula1-form.component';
 import { MestreListComponent } from './mestre/mestre-list/mestre-list.component';
 import { MestreFormComponent } from './mestre/mestre-form/mestre-form.component';
-import { CursoEixoListComponent } from './curso-eixo/curso-eixo-list/cursoEixo-list.component';
+import { CursoEixoListComponent } from './cursoEixo/curso-eixo-list/cursoEixo-list.component';
+import { CursoEixoFormComponent } from './cursoEixo/curso-eixo-form/curso-eixo-form.component';
+import { EquipeListComponent } from './equipe/equipe-list/equipe-list.component';
+import { EquipeFormComponent } from './equipe/equipe-form/equipe-form.component';
+import { AtividadeListComponent } from './atividade/atividade-list/atividade-list.component';
+import { AtividadeFormComponent } from './atividade/atividade-form/atividade-form.component';
+import { Aluno1ListComponent } from './aluno1/aluno1-list/aluno1-list.component';
+import { Aluno1FormComponent } from './aluno1/aluno1-form/aluno1-form.component';
+import { AtividadeEixoListComponent } from './atividade-eixo/atividade-eixo-list/atividade-eixo-list.component';
+import { AtividadeEixoFormComponent } from './atividade-eixo/atividade-eixo-form/atividade-eixo-form.component';
 
 
 @NgModule({
@@ -56,7 +65,16 @@ import { CursoEixoListComponent } from './curso-eixo/curso-eixo-list/cursoEixo-l
     SalaAula1FormComponent,
     MestreListComponent,
     MestreFormComponent,
-    CursoEixoListComponent
+    CursoEixoListComponent,
+    CursoEixoFormComponent,
+    EquipeListComponent,
+    EquipeFormComponent,
+    AtividadeListComponent,
+    AtividadeFormComponent,
+    Aluno1ListComponent,
+    Aluno1FormComponent,
+    AtividadeEixoListComponent,
+    AtividadeEixoFormComponent
   ],
   imports: [
     BrowserModule,

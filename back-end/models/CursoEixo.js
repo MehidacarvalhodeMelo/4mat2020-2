@@ -1,9 +1,8 @@
 const mongoose = require('mongoose')
 
 const esquema = mongoose.Schema({
-     curso: {type: mongoose.ObjectId, ref: 'Curso1', required: true},
+  curso1: {type: mongoose.ObjectId, ref: 'Curso1', required: true},
   eixo: {type: mongoose.ObjectId, ref: 'Eixo', required: true}
-    
 })
 
 // PARÂMETROS DO mongoose.model()

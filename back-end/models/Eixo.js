@@ -10,15 +10,13 @@ const esquema = mongoose.Schema({
         required: true,
         min: 3,
         max: 7
-        
     },
     nivel: {
         type: String,
         required: true,
         // Conjunto dos valores válidos
         enum: ['Fase I', 'Fase II']
-    },
-    
+    }   
 })
 
 // PARÂMETROS DO mongoose.model()

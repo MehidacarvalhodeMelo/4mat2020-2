@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class Auluno1Service {
+export class Aluno1Service {
     private server = environment.apiServer
     private apiUri = this.server + 'aluno1'
 

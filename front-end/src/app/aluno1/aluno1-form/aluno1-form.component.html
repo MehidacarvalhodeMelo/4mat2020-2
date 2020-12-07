@@ -1,0 +1,57 @@
+<h1>{{ title }}</h1>
+ 
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+ 
+  <!--mat-form-field appearance="fill"-->
+  <mat-form-field>
+    <mat-label>Nome da aluno</mat-label>
+    <input name="nome" [(ngModel)]="aluno1.nome" matInput required
+      placeholder="Informe o nome da aluno1">
+  </mat-form-field>
+ 
+  
+  <mat-form-field >
+    <mat-label>Data de nascimento</mat-label>
+    <input name="data_nascimento" [(ngModel)]="aluno1._nascimento" matInput required
+    placeholder="Informe a data de nascimento" type="date">
+    </mat-form-field>
+
+    <mat-form-field >
+    <mat-label>RA</mat-label>
+    <input name="ra" [(ngModel)]="aluno1.ra" matInput required
+    placeholder="Informe o ra do aluno" type="number">
+  </mat-form-field>
+ 
+ <mat-form-field >
+    <mat-label>Telefone de contato</mat-label>
+    <input name="telefone_contato" [(ngModel)]="aluno1.telefone_contato" matInput required
+    placeholder="Informe o telefone de contato do aluno" type="string">
+  </mat-form-field>
+
+<mat-form-field >
+    <mat-label>Email</mat-label>
+    <input name="email" [(ngModel)]="aluno1.email" matInput required
+    placeholder="Informe o email do aluno" type="string">
+  </mat-form-field>
+
+   <mat-form-field>
+    <mat-label>Equipe</mat-label>
+      <mat-select name="equipe" [(ngModel)]="aluno1.equipe" required>
+        <mat-option *ngFor="let equipe of equipes" [value]="equipe._id">
+          {{ equipe.nome }} 
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+ 
+  <mat-toolbar class="form-buttons">
+    <mat-toolbar-row>
+      <button mat-raised-button type="submit" color="accent">
+        Salvar
+      </button>
+      <button mat-raised-button type="button" (click)="voltar(f)">
+        Voltar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+ 
+</form>
