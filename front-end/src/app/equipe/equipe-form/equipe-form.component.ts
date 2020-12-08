@@ -1,5 +1,5 @@
 import { CursoEixoService } from './../../cursoEixo/cursoEixo.service';
-import { CursoService } from './../../curso/curso.service';
+import { Curso1Service } from './../../curso1/curso1.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EquipeService } from './../equipe.service';
 import { Component, OnInit } from '@angular/core';
@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ProfessorService } from 'src/app/professor/professor.service';
-import { SalaAulaService } from 'src/app/sala-aula/sala-aula.service';
+import { SalaAula1Service } from 'src/app/sala-aula1/sala-aula1.service';
 import { MestreService } from 'src/app/mestre/mestre.service';
 
 @Component({
@@ -44,14 +44,13 @@ export class EquipeFormComponent implements OnInit {
     constructor(
         private professorSrv: ProfessorService,
         private equipeSrv: EquipeService,
-        private curso1Srv : CursoService,
+        private curso1Srv : Curso1Service,
         private mestreSrv : MestreService,
-        private salaAula1Srv : SalaAulaService,
+        private salaAula1Srv : SalaAula1Service,
         private cursoEixoSrv : CursoEixoService,
         private snackBar: MatSnackBar,
         private location: Location,
         private actRoute: ActivatedRoute
-        
     ) { }
 
     async ngOnInit() {

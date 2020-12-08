@@ -18,7 +18,6 @@ export class CursoEixoService {
       return this.http.request('DELETE', this.apiUri, {body: {_id: id}}).toPromise()
   }
   novo(body : any){
-      
       return this.http.post(this.apiUri, body).toPromise()
   }
   obterUm(id: string){

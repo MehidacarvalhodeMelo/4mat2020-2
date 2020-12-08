@@ -17,7 +17,7 @@
 
   <mat-form-field >
     <mat-label>Data de nascimento</mat-label>
-    <input name="data_nascimento" [(ngModel)]="mestre._nascimento" matInput required
+    <input name="data_nascimento" [(ngModel)]="mestre.data_nascimento" matInput required
     placeholder="Informe a data de nascimento" type="date">
     </mat-form-field>
 
@@ -25,13 +25,13 @@
     <mat-form-field >
     <mat-label>CPF</mat-label>
     <input name="cpf" [(ngModel)]="mestre.cpf" matInput required
-    placeholder="Informe o cpf do professor" type="string">
+    placeholder="Informe o cpf do professor" mask="000.000.000-00" [dropSpecialCharacters]="false">
   </mat-form-field>
   
   <mat-form-field >
     <mat-label>RG</mat-label>
     <input name="rg" [(ngModel)]="mestre.rg" matInput required
-    placeholder="Informe o rg do professor" type="number">
+    placeholder="Informe o rg do professor" type="string">
   </mat-form-field>
   
   

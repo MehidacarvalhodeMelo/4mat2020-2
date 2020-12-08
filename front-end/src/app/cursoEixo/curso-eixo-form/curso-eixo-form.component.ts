@@ -1,4 +1,4 @@
-import { CursoService } from './../../curso/curso.service';
+import { Curso1Service } from './../../curso1/curso1.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CursoEixoService } from '../cursoEixo.service';
 import { Component, OnInit } from '@angular/core';
@@ -34,7 +34,7 @@ export class CursoEixoFormComponent implements OnInit {
     constructor(
         private eixoSrv: EixoService,
         private cursoEixoSrv: CursoEixoService,
-        private cursoSrv : CursoService,
+        private cursoSrv : Curso1Service,
         private snackBar: MatSnackBar,
         private location: Location,
         private actRoute: ActivatedRoute
@@ -42,6 +42,7 @@ export class CursoEixoFormComponent implements OnInit {
 
     async ngOnInit() {
         //Verificando se existe a rota que trouxe ao formulário
+        console.log(this.actRoute.snapshot.params['id'])
         if (this.actRoute.snapshot.params['id']) {
             try{
                 //1) Trazer o registro do back-end para edição
@@ -58,6 +59,7 @@ export class CursoEixoFormComponent implements OnInit {
         try {
             this.cursos = await this.cursoSrv.listar()
             this.eixos = await this.eixoSrv.listar()
+            console.log(this.cursos)
             
 
 

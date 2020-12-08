@@ -21,6 +21,7 @@ export class EquipeListComponent implements OnInit {
     async ngOnInit() {
         this.equipes = await this.equipeSrv.listar()
         console.log(this.equipes)
+        
     }
     async excluir(id: string) {
         if (confirm('Deseja realmente excluir este item?')) {

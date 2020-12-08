@@ -52,7 +52,7 @@ controller.listar = async (req, res) => {
         // find() sem parâmetros é para trazer tudo
         let dados = await Equipe.find()
         .populate('curso')//Dados completos
-        .populate('professor', 'nome email')//Só nome email
+        .populate('mestre', 'nome email')//Só nome email
         .populate('sala_aula')
         .populate('atividades')
         //Dados completos

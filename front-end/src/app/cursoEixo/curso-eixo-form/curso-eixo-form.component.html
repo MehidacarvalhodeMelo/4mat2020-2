@@ -4,11 +4,11 @@
  
   <mat-form-field>
     <mat-label>Curso</mat-label>
-      <mat-select name="curso" [(ngModel)]="cursoEixo.curso" required>
+      <mat-select name="curso1" [(ngModel)]="cursoEixo.curso1" required>
         <!-- No mat-option, usamos a listagem da entidade relacionada
           para gerar as opções que serão exibidas ao usuário.-->
         <mat-option *ngFor="let curso of cursos" [value]="curso._id">
-          {{ curso.nome }} ({{curso.carga-horaria}})
+          {{ curso.nome }} ({{curso.carga_horaria}})
         </mat-option>
       </mat-select>
   </mat-form-field>
@@ -17,10 +17,12 @@
     <mat-label>Eixo</mat-label>
       <mat-select name="eixo" [(ngModel)]="cursoEixo.eixo" required>
         <mat-option *ngFor="let eixo of eixos" [value]="eixo._id">
-          {{ eixo.nome }} ({{eixo.carga-horaria}}) ({{eixo.nivel}})
+          {{ eixo.nome }} ({{eixo.carga_horaria}}) ({{eixo.nivel}})
         </mat-option>
       </mat-select>
   </mat-form-field>
+
+  
 
    
  

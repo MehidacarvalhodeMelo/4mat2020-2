@@ -8,7 +8,7 @@ const esquema = mongoose.Schema({
         enum: ['Fase I', 'Fase II']
     },
     carga_horaria: {
-        type: Number,
+        type: String,
         required: true
     },
 })

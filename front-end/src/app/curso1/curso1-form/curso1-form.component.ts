@@ -16,9 +16,9 @@ export class Curso1FormComponent implements OnInit {
     curso1: any = {} //Objeto vazio, nome da entidade no SINGULAR
 
     niveis: any = [
-        { valor: 'Básico', descr: 'Básico' },
-        { valor: 'Intermediário', descr: 'Intermediário' },
-        { valor: 'Avançado', descr: 'Avancado' }
+        { valor: 'Fase I', descr: 'Fase I' },
+        { valor: 'Fase II', descr: 'Fase II' }
+        
     ]
 
     constructor(

@@ -40,6 +40,16 @@ export class Aluno1FormComponent implements OnInit {
             }
             
         }
+        try {
+            this.equipes = await this.equipeSrv.listar()
+
+
+
+        }
+        catch(erro){
+            console.log(erro)
+                this.snackBar.open('ERRO: não foi possível carregar os dados do formulário.', 'Que pena', { duration: 5000})
+            }
     }
 
     async salvar(form: NgForm) {
