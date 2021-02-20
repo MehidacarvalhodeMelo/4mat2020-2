@@ -9,7 +9,6 @@ const esquema = mongoose.Schema({
         type: Number,
         required: true,
         min: 600,
-        
         default: 800    // Valor padrão
     }
     

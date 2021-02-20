@@ -29,9 +29,9 @@ Nova atividade
   <!-- Editar Column -->
 <ng-container matColumnDef="editar">
 <th mat-header-cell class="cell-align-center" *matHeaderCellDef>Editar</th>
-<td mat-cell class="cell-align-center" *matCellDef="let curso">
+<td mat-cell class="cell-align-center" *matCellDef="let atividade">
 <a mat-raised-button color="accent" title="Editar"
-[routerLink]="['/curso', curso._id]">
+[routerLink]="['/atividade', atividade._id]">
 <mat-icon>edit</mat-icon>
 </a>
 </td>
@@ -40,8 +40,8 @@ Nova atividade
 <!-- Excluir Column -->
 <ng-container matColumnDef="excluir">
 <th mat-header-cell class="cell-align-center" *matHeaderCellDef>Excluir</th>
-<td mat-cell class="cell-align-center" *matCellDef="let curso">
-<button mat-raised-button color="warn" title="Excluir" (click)="excluir(curso._id)">
+<td mat-cell class="cell-align-center" *matCellDef="let atividade">
+<button mat-raised-button color="warn" title="Excluir" (click)="excluir(atividade._id)">
 <mat-icon>delete_forever</mat-icon>
 </button>
 </td>

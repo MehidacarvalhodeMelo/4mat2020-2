@@ -9,7 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class Aluno1ListComponent implements OnInit {
     alunos1: any = [] //Vetor vazio
-    displayedColumns: string[] = ['nome', 'data_nascimento', 'ra', 'telefone_contato',
+    displayedColumns: string[] = ['nome', 'data_nascimento', 'ra', 'rm', 'telefone_contato',
         'email', 'equipe', 'editar', 'excluir']
 
     constructor(

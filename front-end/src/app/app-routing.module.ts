@@ -22,6 +22,7 @@ import { Aluno1ListComponent } from './aluno1/aluno1-list/aluno1-list.component'
 import { Aluno1FormComponent } from './aluno1/aluno1-form/aluno1-form.component';
 import { AtividadeEixoListComponent } from './atividade-eixo/atividade-eixo-list/atividade-eixo-list.component';
 import { AtividadeEixoFormComponent } from './atividade-eixo/atividade-eixo-form/atividade-eixo-form.component';
+import { InicialComponent } from './inicial/inicial.component';
 
 const routes: Routes = [
     //Rotas no Angular nunca começam com barra /
@@ -58,7 +59,8 @@ const routes: Routes = [
     {path: 'aluno1/:id', component: Aluno1FormComponent},
     {path: 'atividade-eixo', component: AtividadeEixoListComponent},
     {path: 'atividade-eixo/novo', component: AtividadeEixoFormComponent},
-    {path: 'atividade-eixo/:id', component: AtividadeEixoFormComponent}
+    {path: 'atividade-eixo/:id', component: AtividadeEixoFormComponent},
+    {path: '', component: InicialComponent},
 
 ];
 
