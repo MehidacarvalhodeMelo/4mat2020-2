@@ -9,7 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class EixoListComponent implements OnInit {
     eixos: any = [] //Vetor vazio
-    displayedColumns : string[] = ['nome', 'carga_horaria', 'nivel',
+    displayedColumns : string[] = ['nome', 'carga_horaria', 'nivel', 'cor',
 'editar', 'excluir']
   constructor(
       private eixoSrv : EixoService,
